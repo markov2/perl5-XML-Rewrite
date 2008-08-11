@@ -1,0 +1,11 @@
+ChangeLog
+MANIFEST
+Makefile.PL
+bin/xmlrewrite
+example/dimap/README
+example/dimap/horrible.zip
+example/dimap/norm
+lib/XML/Rewrite.pm
+lib/XML/Rewrite/Schema.pm
+t/01use.t
+t/pod.t
