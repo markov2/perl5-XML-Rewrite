@@ -1,8 +1,12 @@
-use warnings;
-use strict;
+# This code is part of distribution XML-Rewrite.  Meta-POD processed with
+# OODoc into POD and HTML manual-pages.  See README.md
+# Copyright Mark Overmeer.  Licensed under the same terms as Perl itself.
 
 package XML::Rewrite;
 use base 'XML::Compile::Cache';
+
+use warnings;
+use strict;
 
 use Log::Report 'xml-rewrite', syntax => 'SHORT';
 
@@ -78,7 +82,6 @@ not provided, the value from the source document will be used, but only
 when present.
 
 =default any_element   'ATTEMPT'
-=default any_attribute 'ATTEMPT'
 
 =option  use_default_namespace BOOLEAN
 =default use_default_namespace <false>
@@ -116,7 +119,6 @@ sub init($)
 {   my ($self, $args) = @_;
 
     $args->{any_element}   = 'ATTEMPT';
-    $args->{any_attribute} = 'ATTEMPT';
 
     my $mode = $self->{XR_change} = $args->{change} || 'TRANSFORM';
     $mode eq 'REPAIR' || $mode eq 'TRANSFORM'
@@ -135,7 +137,7 @@ sub init($)
     my @read_hooks = ( {after => 'XML_NODE'} );
     foreach ( @{$args->{remove_elems}} )
     {   my $type = $self->findName($_) or next;
-warn "REMOVE TYPE=$type not yet implemented";
+ warn "REMOVE TYPE=$type not yet implemented";
     }
 
     my $comments = $args->{comments} || 'KEEP';

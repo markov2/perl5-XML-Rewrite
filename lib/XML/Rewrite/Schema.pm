@@ -1,10 +1,14 @@
-use warnings;
-use strict;
+# This code is part of distribution XML-Rewrite.  Meta-POD processed with
+# OODoc into POD and HTML manual-pages.  See README.md
+# Copyright Mark Overmeer.  Licensed under the same terms as Perl itself.
 
 package XML::Rewrite::Schema;
 use base 'XML::Rewrite';
 
-use Log::Report 'xml-rewrite', syntax => 'SHORT';
+use warnings;
+use strict;
+
+use Log::Report 'xml-rewrite';
 
 use XML::Compile::Util    qw/pack_type type_of_node :constants/;
 use XML::LibXML           ();
