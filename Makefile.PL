@@ -4,7 +4,7 @@ use 5.010;
 
 WriteMakefile
  ( NAME	 	=> 'XML::Rewrite'
- , VERSION	=> '0.11'
+ , VERSION	=> '0.12'
  , PREREQ_PM    =>
    { XML::LibXML               => 1.65
    , XML::Compile::Tester      => 0.01
